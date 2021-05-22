@@ -1,0 +1,12 @@
+
+{
+    "full_name": "Shamsuddin Rehmani",
+    "email": "shamsuddin.rehmani@gmail.com",
+    "github_username": "rehmanis",
+    "project_name": "flask-fullstack",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "cli_entry_point": "{{ project_slug }}",
+    "project_short_description": "Flask Boilerplate contains modules you need to build a flask-based full-stack app",
+    "pypi_username": "{{ cookiecutter.github_username }}",
+    "version": "0.1.0"
+  }
