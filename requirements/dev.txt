@@ -5,7 +5,9 @@
 #    pip-compile requirements/dev.in
 #
 appdirs==1.4.4
-    # via virtualenv
+    # via
+    #   black
+    #   virtualenv
 arrow==0.13.2
     # via
     #   jinja2-time
@@ -16,6 +18,8 @@ attrs==20.3.0
     # via pytest
 binaryornot==0.4.4
     # via cookiecutter
+black==21.5b1
+    # via -r requirements/dev.in
 certifi==2020.12.5
     # via requests
 cfgv==3.2.0
@@ -26,20 +30,15 @@ chardet==4.0.0
     #   requests
 click==7.1.2
     # via
+    #   black
     #   cookiecutter
-    #   mkdocs
-    #   nltk
     #   pip-tools
-codecov==2.1.11
-    # via -r requirements/dev.in
 colorama==0.4.4
     # via
     #   pytest
     #   tox
-cookiecutter==1.7.2
+cookiecutter==1.7.3
     # via pytest-cookies
-coverage==5.5
-    # via codecov
 distlib==0.3.1
     # via virtualenv
 filelock==3.0.12
@@ -48,8 +47,6 @@ filelock==3.0.12
     #   virtualenv
 flake8==3.9.1
     # via -r requirements/dev.in
-future==0.18.2
-    # via lunr
 identify==2.2.4
     # via pre-commit
 idna==2.10
@@ -60,44 +57,24 @@ jinja2==2.11.3
     # via
     #   cookiecutter
     #   jinja2-time
-    #   mkdocs
-joblib==1.0.1
-    # via nltk
-livereload==2.6.3
-    # via mkdocs
-lunr[languages]==0.5.8
-    # via mkdocs
-markdown==3.3.4
-    # via
-    #   mkdocs
-    #   mkdocs-material
-    #   pymdown-extensions
 markupsafe==1.1.1
     # via
     #   cookiecutter
     #   jinja2
 mccabe==0.6.1
     # via flake8
-mkdocs-material-extensions==1.0.1
-    # via mkdocs-material
-mkdocs-material==7.1.2
-    # via
-    #   -r requirements\docs.in
-    #   mkdocs-material-extensions
-mkdocs==1.1.2
-    # via
-    #   -r requirements\docs.in
-    #   mkdocs-material
 more-itertools==8.7.0
     # via pytest
-nltk==3.6.2
-    # via lunr
+mypy-extensions==0.4.3
+    # via black
 nodeenv==1.6.0
     # via pre-commit
 packaging==20.9
     # via
     #   pytest
     #   tox
+pathspec==0.8.1
+    # via black
 pep517==0.10.0
     # via pip-tools
 pip-tools==6.1.0
@@ -118,35 +95,27 @@ pycodestyle==2.7.0
     # via flake8
 pyflakes==2.3.1
     # via flake8
-pygments==2.8.1
-    # via mkdocs-material
-pymdown-extensions==8.1.1
-    # via mkdocs-material
 pyparsing==2.4.7
     # via packaging
 pytest-cookies==0.5.1
     # via -r requirements\tests.in
 pytest==5.4.3
-    # via pytest-cookies
+    # via
+    #   -r requirements\tests.in
+    #   pytest-cookies
 python-dateutil==2.8.1
     # via arrow
 python-slugify==4.0.1
     # via cookiecutter
 pyyaml==5.4.1
-    # via
-    #   mkdocs
-    #   pre-commit
+    # via pre-commit
 regex==2021.4.4
-    # via nltk
+    # via black
 requests==2.25.1
-    # via
-    #   codecov
-    #   cookiecutter
+    # via cookiecutter
 six==1.15.0
     # via
     #   cookiecutter
-    #   livereload
-    #   lunr
     #   python-dateutil
     #   tox
     #   virtualenv
@@ -154,17 +123,12 @@ text-unidecode==1.3
     # via python-slugify
 toml==0.10.2
     # via
+    #   black
     #   pep517
     #   pre-commit
     #   tox
-tornado==6.1
-    # via
-    #   livereload
-    #   mkdocs
 tox==3.23.0
     # via -r requirements/dev.in
-tqdm==4.60.0
-    # via nltk
 urllib3==1.26.4
     # via requests
 virtualenv==20.4.4

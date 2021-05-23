@@ -1,2 +1,5 @@
-version_info = (1, 0, 0)
-__version__ = ".".join([str(v) for v in version_info])
+"""Top-level package for {{ cookiecutter.project_name }}."""
+
+__author__ = """{{ cookiecutter.full_name }}"""
+__email__ = "{{ cookiecutter.email }}"
+__version__ = "{{ cookiecutter.version }}"

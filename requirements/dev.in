@@ -1,8 +1,7 @@
 # test dependencies
 -r tests.in
--r docs.in
 pip-tools
 pre-commit
 tox
-codecov
 flake8
+black

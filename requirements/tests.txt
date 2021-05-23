@@ -53,7 +53,9 @@ pyparsing==2.4.7
 pytest-cookies==0.5.1
     # via -r requirements/tests.in
 pytest==5.4.3
-    # via pytest-cookies
+    # via
+    #   -r requirements/tests.in
+    #   pytest-cookies
 python-dateutil==2.8.1
     # via arrow
 python-slugify==4.0.1
