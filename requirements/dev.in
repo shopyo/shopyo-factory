@@ -1,0 +1,7 @@
+# test dependencies
+-r tests.in
+pip-tools
+pre-commit
+tox
+flake8
+black

@@ -1,0 +1,18 @@
+{
+    "full_name": "Shamsuddin Rehmani",
+    "email": "shamsuddin.rehmani@gmail.com",
+    "github_username": "rehmanis",
+    "project_name": "flask-fullstack",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "cli_entry_point": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_short_description": "Flask fullstack contains modules you need to build a flask-based full-stack app",
+    "pypi_username": "{{ cookiecutter.github_username }}",
+    "doc_type": ["mkdocs", "sphinx"],
+    "version": "0.1.0",
+    "_copy_without_render": [
+        "*.html",
+        "*.txt"
+
+    ]
+
+}
