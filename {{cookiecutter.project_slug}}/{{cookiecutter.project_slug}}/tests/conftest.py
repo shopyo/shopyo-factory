@@ -2,8 +2,8 @@ import os
 import shutil
 
 import pytest
-from app import app as _app
-from app import create_app
+from {{ cookiecutter.project_slug }}.app import app as _app
+from {{ cookiecutter.project_slug }}.app import create_app
 
 from shopyo.api.file import tryrmtree
 
@@ -18,3 +18,10 @@ def app(tmpdir, app_type):
     dev_app = create_app(app_type)
     yield dev_app
     shutil.copy(dest, src)
+
+
+@pytest.fixture
+def restore_cwd():
+    old = os.getcwd()
+    yield
+    os.chdir(old)

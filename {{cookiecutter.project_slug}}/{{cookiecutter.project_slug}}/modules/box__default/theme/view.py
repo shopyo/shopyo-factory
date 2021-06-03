@@ -8,9 +8,9 @@ from flask import render_template
 from flask import url_for
 from flask_login import login_required
 from {{ cookiecutter.project_slug }}.modules.box__default.settings.helpers import get_setting
+from {{ cookiecutter.project_slug }}.modules.box__default.settings.helpers import set_setting
 
-from {{ cookiecutter.project_slug }}.api.enhance import set_setting
-from {{ cookiecutter.project_slug }}.api.file import get_folders
+from shopyo.api.file import get_folders
 
 # from flask import flash
 # from flask import request

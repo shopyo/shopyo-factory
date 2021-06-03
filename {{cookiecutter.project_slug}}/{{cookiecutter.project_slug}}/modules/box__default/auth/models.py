@@ -15,7 +15,7 @@ from sqlalchemy.ext.hybrid import hybrid_property
 from werkzeug.security import check_password_hash
 from werkzeug.security import generate_password_hash
 
-from shopyo.api.models import PkModel
+from {{ cookiecutter.project_slug }}.models import PkModel
 
 role_user_bridge = db.Table(
     "role_user_bridge",

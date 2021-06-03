@@ -5,7 +5,7 @@ Example all ``shopyo <cmd> [OPTIONS] [ARGS]...`` commands can also be run as
 ``python manage.py <cmd> [OPTIONS] [ARGS]...``
 """
 
-from shopyo.api.cli import shopyo_cli
+from {{ cookiecutter.project_slug }}.cli import cli
 
 if __name__ == '__main__':
-    shopyo_cli()
+    cli()

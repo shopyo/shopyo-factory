@@ -5,7 +5,7 @@ from flask import Blueprint
 from flask import render_template
 from {{ cookiecutter.project_slug }}.modules.box__default.settings.helpers import get_setting
 
-from {{ cookiecutter.project_slug }}.api.templates import yo_render
+from shopyo.api.templates import yo_render
 
 # from flask import url_for
 # from flask import redirect

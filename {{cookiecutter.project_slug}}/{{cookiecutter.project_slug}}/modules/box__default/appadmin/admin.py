@@ -7,7 +7,7 @@ from flask_login import current_user
 from {{ cookiecutter.project_slug }}.init import login_manager
 from {{ cookiecutter.project_slug }}.modules.box__default.auth.models import User
 
-from {{ cookiecutter.project_slug }}.api.html import notify_warning
+from shopyo.api.html import notify_warning
 
 login_manager.login_view = "auth.login"
 login_manager.login_message = notify_warning("Please login for access")
