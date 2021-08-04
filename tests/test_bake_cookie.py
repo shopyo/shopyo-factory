@@ -1,5 +1,6 @@
 import os
 import shlex
+import sys
 import subprocess
 from contextlib import contextmanager
 
@@ -32,7 +33,8 @@ def run_inside_dir(cmd, dir_path):
     :raises CalledProcessError: if command exits with non zero return code
     """
     with inside_dir(dir_path):
-        return subprocess.check_call(shlex.split(cmd))
+        print(shlex.split(cmd))
+        return subprocess.check_call(shlex.split(cmd, posix="win" not in sys.platform))
 
 
 def test_bake_project_with_mkdocs(cookies):
