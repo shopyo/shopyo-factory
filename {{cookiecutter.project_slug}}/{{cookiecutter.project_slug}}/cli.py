@@ -15,8 +15,6 @@ Usage ``{{ cookiecutter.project_slug }} [OPTIONS] COMMAND [ARGS]...``
 # import click
 
 import os
-import sys
-import importlib
 from subprocess import PIPE
 from subprocess import run
 
@@ -25,8 +23,10 @@ from flask.cli import FlaskGroup
 from flask.cli import pass_script_info
 
 from {{ cookiecutter.project_slug }}.cli_helper import _clean
+from {{ cookiecutter.project_slug }}.cli_helper import _run_app
 from {{ cookiecutter.project_slug }}.cli_helper import _upload_data
 from {{ cookiecutter.project_slug }}.database import autoload_models
+from {{ cookiecutter.project_slug }}.app import create_app
 from shopyo.api.cmd_helper import _collectstatic
 from shopyo.api.constants import SEP_CHAR
 from shopyo.api.constants import SEP_NUM
@@ -34,16 +34,7 @@ from shopyo.api.info import printinfo
 
 
 def _create_shopyo_app(info):
-    sys.path.insert(0, os.getcwd())
-
-    try:
-        from {{ cookiecutter.project_slug }}.app import create_app
-    except Exception as e:
-        print(e)
-        return None
-
     config_name = info.data.get("config") or "development"
-
     return create_app(config_name=config_name)
 
 
@@ -119,6 +110,18 @@ def initialise(verbose):
     _upload_data(verbose=verbose)
 
     click.echo("All Done!")
+
+
+@cli.command("rundebug", with_appcontext=False)
+def rundebug():
+    """runs the shopyo flask app in development mode"""
+    _run_app("development")
+
+
+@cli.command("runserver", with_appcontext=False)
+def runserver():
+    """runs the shopyo flask app in production mode"""
+    _run_app("production")
 
 
 if __name__ == "__main__":

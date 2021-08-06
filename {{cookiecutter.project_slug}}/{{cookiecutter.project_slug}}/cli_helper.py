@@ -1,5 +1,8 @@
-import os
 import importlib
+import os
+import sys
+from subprocess import run
+
 import click
 
 from shopyo.api.file import tryrmcache
@@ -79,3 +82,16 @@ def _upload_data(verbose=False):
                     click.echo(f"[ ] {e}")
 
     click.echo("")
+
+
+def _run_app(mode):
+    """helper command for running shopyo flask app in debug/production mode"""
+    app_path = os.path.join(os.getcwd(), "app.py")
+
+    if not os.path.exists(app_path):
+        click.secho(f"Unable to find `app.py` in {os.getcwd()}", fg="red")
+        sys.exit(1)
+
+    os.environ["FLASK_APP"] = f"app:create_app('{mode}')"
+    os.environ["FLASK_ENV"] = mode
+    run(["flask", "run"])
