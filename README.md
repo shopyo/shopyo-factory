@@ -29,6 +29,11 @@ the [shopyo docs](https://shopyo.readthedocs.io/en/latest/modules.html#default-m
     > py -3 -m venv env
     > env\Scripts\activate
     ```
+* Upgrade pip and setuptools:
+
+    ```
+    $ python -m pip install --upgrade pip setuptools
+    ```
 
 * Install the development and production requirements:
 
