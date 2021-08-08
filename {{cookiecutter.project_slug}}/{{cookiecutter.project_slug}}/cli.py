@@ -27,9 +27,9 @@ from {{ cookiecutter.project_slug }}.cli_helper import _run_app
 from {{ cookiecutter.project_slug }}.cli_helper import _upload_data
 from {{ cookiecutter.project_slug }}.database import autoload_models
 from {{ cookiecutter.project_slug }}.app import create_app
+from {{ cookiecutter.project_slug }}.constants import SEP_CHAR
+from {{ cookiecutter.project_slug }}.constants import SEP_NUM
 from shopyo.api.cmd_helper import _collectstatic
-from shopyo.api.constants import SEP_CHAR
-from shopyo.api.constants import SEP_NUM
 from shopyo.api.info import printinfo
 
 

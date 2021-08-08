@@ -4,8 +4,8 @@ import pytest
 from click.testing import CliRunner
 
 from {{ cookiecutter.project_slug }}.cli import cli
-from shopyo.api.constants import SEP_CHAR
-from shopyo.api.constants import SEP_NUM
+from {{ cookiecutter.project_slug }}.constants import SEP_CHAR
+from {{ cookiecutter.project_slug }}.constants import SEP_NUM
 
 pytestmark = pytest.mark.cli_unit
 

@@ -6,6 +6,8 @@
 #
 import sys
 
+from {{ cookiecutter.project_slug }}.app import create_app
+
 #
 # The "/home/appinv" below specifies your home
 # directory -- the rest should be the directory you uploaded your Flask
@@ -17,8 +19,9 @@ import sys
 path = ""
 if path not in sys.path:
     sys.path.insert(0, path)
-#
-from {{ cookiecutter.project_slug }}.app import app as application  # noqa
+
+
+application = create_app("production")
 
 #
 # NB -- many Flask guides suggest you use a file called run.py; that's

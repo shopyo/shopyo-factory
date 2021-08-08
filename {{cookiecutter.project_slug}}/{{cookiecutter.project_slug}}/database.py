@@ -2,8 +2,8 @@ import os
 import click
 import importlib
 
-from shopyo.api.constants import SEP_CHAR
-from shopyo.api.constants import SEP_NUM
+from {{ cookiecutter.project_slug }}.constants import SEP_CHAR
+from {{ cookiecutter.project_slug }}.constants import SEP_NUM
 
 def autoload_models(verbose=False):
     """
