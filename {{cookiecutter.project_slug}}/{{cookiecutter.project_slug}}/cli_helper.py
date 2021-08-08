@@ -8,8 +8,8 @@ import click
 from shopyo.api.file import tryrmcache
 from shopyo.api.file import tryrmfile
 from shopyo.api.file import tryrmtree
-from shopyo.api.constants import SEP_CHAR
-from shopyo.api.constants import SEP_NUM
+from {{ cookiecutter.project_slug }}.constants import SEP_CHAR
+from {{ cookiecutter.project_slug }}.constants import SEP_NUM
 
 def _clean(verbose=False):
     """
